@@ -6,14 +6,17 @@ using UnityEngine.UI;
 public class ChangeEyes : MonoBehaviour
 {
     public Material eyeMat;
+    public AudioSource audio;
+    public ParticleSystem particles;
+
     public void OnClick()
     {
         int index = Random.Range(0, 6);
+        audio.Play();
+        particles.Play();
         switch (index)
         {
             case 0:
-
-
                 eyeMat.mainTextureOffset = new Vector2(0,0.83f);
                 break;
             case 1:
